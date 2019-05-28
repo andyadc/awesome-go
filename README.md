@@ -1,0 +1,2 @@
+# awesome-go
+Golang
