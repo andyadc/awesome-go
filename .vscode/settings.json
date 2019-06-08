@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 17,
+    "go.testFlags": [
+        "-v"
+    ],
+    "terminal.integrated.cursorStyle": "line"
+}
