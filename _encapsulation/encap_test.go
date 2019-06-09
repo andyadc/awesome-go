@@ -17,6 +17,7 @@ func (e Employee) string() string {
 	return fmt.Sprintf("Id:%d-Name:%s-Age:%d", e.Id, e.Name, e.Age)
 }
 
+//推荐使用这种方式，减少内存使用
 func (e *Employee) string2() string {
 	fmt.Printf("address is %x \n", unsafe.Pointer(&e.Name))
 	return fmt.Sprintf("Id:%d-Name:%s-Age:%d", e.Id, e.Name, e.Age)
