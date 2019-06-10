@@ -4,5 +4,7 @@
     "go.testFlags": [
         "-v"
     ],
-    "terminal.integrated.cursorStyle": "line"
+    "terminal.integrated.cursorStyle": "line",
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreview": false
 }
