@@ -21,7 +21,7 @@ func someFun() (s string, err bool) {
 }
 
 func TestSwitch(t *testing.T) {
-	var n int = 1
+	n := 1
 	switch {
 	case n >= 0 && n <= 10:
 		t.Log("0~10")

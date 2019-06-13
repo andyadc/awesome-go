@@ -8,7 +8,7 @@ import (
 type MyInt int64
 
 func TestImplicit(t *testing.T) {
-	var a int = 1
+	a := 1
 	var b int64
 
 	b = int64(a) //不支持隐式转换
