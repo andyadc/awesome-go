@@ -2,6 +2,7 @@ package _error
 
 import (
 	"errors"
+	"fmt"
 	"testing"
 )
 
@@ -19,4 +20,21 @@ func TestErrorCheck(t *testing.T) {
 	} else {
 		t.Log(v)
 	}
+}
+
+func TestPanicVxExit(t *testing.T) {
+
+	defer func() {
+		fmt.Println("Finally!")
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Println("Recover from ", err)
+		}
+	}()
+
+	fmt.Println("Start")
+	panic(errors.New("Something wrong!"))
+	// os.Exit(-1)
 }
