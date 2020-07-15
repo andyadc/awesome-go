@@ -6,10 +6,32 @@ import (
 	"os"
 )
 
-const s string = "constant"
+const helloPrefix = "Hello, "
+const spanish = "Spanish"
+const spanishHelloPrefix = "Hola, "
+
+// Hello func
+func Hello(name string) string {
+	return helloPrefix + name
+}
+
+// Hello2 func
+func Hello2(name string, language string) string {
+	if name == "" {
+		name = "World"
+	}
+
+	if language == spanish {
+		return spanishHelloPrefix + name
+	}
+
+	return helloPrefix + name
+}
 
 func main() {
 	fmt.Println(os.Args)
+
+	fmt.Println(Hello("andy"))
 
 	fmt.Println("hello go")
 	fmt.Println("go" + "lang")
@@ -36,7 +58,7 @@ func main() {
 	f := "short"
 	fmt.Println(f)
 
-	fmt.Println(s)
+	fmt.Println(helloPrefix)
 
 	const n = 50000000
 	const m = 3e20 / n
